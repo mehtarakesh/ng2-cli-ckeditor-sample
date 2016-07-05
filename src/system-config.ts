@@ -7,10 +7,14 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'ng2-ckeditor': 'vendor/ng2-ckeditor/lib/CKEditor.js',
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'ng2-ckeditor':{
+    format: 'cjs'
+  }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

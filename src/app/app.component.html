@@ -1,3 +1,6 @@
 <h1>
   {{title}}
 </h1>
+
+<ckeditor [(ngModel)]="data" debounce="500"></ckeditor>
+<div [innerHTML]="data"></div>

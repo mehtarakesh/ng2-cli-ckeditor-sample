@@ -8,13 +8,13 @@
 /** Map relative paths to URLs. */
 const map: any = {
   'ng2-ckeditor': 'vendor/ng2-ckeditor/lib/CKEditor.js',
+  'ng2-select': 'vendor/ng2-select/',
 };
 
 /** User packages configuration. */
 const packages: any = {
-  'ng2-ckeditor':{
-    format: 'cjs'
-  }
+  'ng2-ckeditor': {format: 'cjs'},
+  'ng2-select': {defaultExtension: 'js', main: 'ng2-select.js'}
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

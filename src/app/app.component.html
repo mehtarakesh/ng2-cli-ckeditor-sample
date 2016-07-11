@@ -11,6 +11,30 @@
     <p *ngIf="!content.valid">This field is required!</p>
   </div>
   <div>
+    <label>Tags : </label>
+    <ng-select [allowClear]="true"
+              [items]="tags"
+              [multiple]="true"
+              placeholder="No tag selected"
+              required
+              name="tags[]"
+              #tagsSelect="ngModel"
+              ngModel>
+    </ng-select>
+    <p *ngIf="!tagsSelect.valid">This field is required!</p>
+  </div>
+  <div>
+    <label>Published : </label>
+    <ng-select [allowClear]="true"
+              [items]="status"
+              required
+              name="status"
+              #statusSelect="ngModel"
+              ngModel>
+    </ng-select>
+    <p *ngIf="!statusSelect.valid">This field is required!</p>
+  </div>
+  <div>
     <button type="submit">Send</button>
   </div>
 </form>
@@ -31,7 +55,38 @@
     <p *ngIf="modelForm.controls.content.errors">This field is required!</p>
   </div>
   <div>
+    <label>Tags : </label>
+    <ng-select [allowClear]="true"
+              [items]="tags"
+              [multiple]="true"
+              placeholder="No tag selected"
+              required
+              formControlName="tags">
+    </ng-select>
+    <p *ngIf="!modelForm.controls.tags.valid">This field is required!</p>
+  </div>
+  <div>
+    <label>Published : </label>
+    <ng-select [allowClear]="true"
+              [items]="status"
+              required
+              formControlName="status">
+    </ng-select>
+    <p *ngIf="!modelForm.controls.status.valid">This field is required!</p>
+  </div>
+  <div>
     <button type="submit">Send</button>
   </div>
 </form>
 <pre>{{modelForm.value | json}}</pre>
+
+<hr>
+
+<ng-select [allowClear]="true"
+          [items]="tags"
+          placeholder="No tag selected"
+          required
+          [multiple]="true"
+          [(ngModel)]="aloneTags">
+</ng-select>
+<pre>{{aloneTags | json}}</pre>

@@ -7,7 +7,7 @@
   </div>
   <div>
     <label>Content : </label>
-    <ckeditor name="content" ngModel required #content="ngModel"></ckeditor>
+    <ckeditor name="content" ngModel required #content="ngModel" [config]="{extraPlugins: 'divarea'}"></ckeditor>
     <p *ngIf="!content.valid">This field is required!</p>
   </div>
   <div>
